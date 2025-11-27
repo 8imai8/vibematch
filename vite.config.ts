@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
 
-      base: "/<vibematch>/",
+      base: "/vibematch/",
         
       plugins: [react()],
       define: {
