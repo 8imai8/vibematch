@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# VibeMatch Music
 
-# Run and deploy your AI Studio app
+AI（Google Gemini）を活用した、直感的で美しい音楽レコメンデーションアプリケーションです。
 
-This contains everything you need to run your app locally.
+ユーザーがお気に入りの曲を入力すると、AIがその楽曲の要素（ジャンル、ムード、楽器構成など）を分析し、ユーザーの好みに合った「まだ見ぬ名曲」を提案します。
 
-View your app in AI Studio: https://ai.studio/apps/drive/110_rrYMI0ScbaX0PglxzfpyaeXPhqU4j
+## 機能
 
-## Run Locally
+- **AIによる分析**: 入力された楽曲からユーザーの「サウンド・プロフィール」を作成
+- **詳細な推薦**: なぜその曲がおすすめなのか、詳細な解説付きで提案
+- **フィードバック学習**: 「いいね」や「スキップ」の操作をAIが学習し、提案内容をリアルタイムで改善
+- **アーティストフィルター**: 特定のアーティストに絞って隠れた名曲を探す機能
+- **リッチなUI**: アルバムアート（プレースホルダー）、ランキング表示、ストリーミングサービスへのリンク
 
-**Prerequisites:**  Node.js
+## 技術スタック
 
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **AI**: Google Gemini API (`gemini-2.5-flash`)
+- **Icons**: Lucide React
+- **Data**: iTunes Search API (for autocomplete)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## セットアップと実行
+
+このプロジェクトを実行するには、Google Gemini APIキーが必要です。
+
+### 環境変数の設定
+
+セキュリティのため、APIキーはコードに直接記述せず、環境変数として管理しています。
+実行環境に応じて、`API_KEY` という名前で環境変数を設定してください。
+
+**ローカルで開発する場合の例 (.env):**
+```bash
+API_KEY=your_gemini_api_key_here
+```
+
+### 注意事項
+
+- APIキーは [Google AI Studio](https://aistudio.google.com/) から取得してください。
+- このプロジェクトはES ModulesとCDNを利用した構成になっています。ローカルで実行する場合は、Viteなどのビルドツールを使用するか、適切なローカルサーバー環境が必要です。
