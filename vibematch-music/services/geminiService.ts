@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { SongInput, RecommendationResponse, RecommendedSong } from "../types";
 
-const apiKey = process.env.API_KEY || "";
+//const apiKey = process.env.API_KEY || "";
 const ai = new GoogleGenAI({ apiKey });
 
 export const getMusicRecommendations = async (
