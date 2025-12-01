@@ -1,0 +1,5 @@
+{
+  "name": "VibeMatch Music",
+  "description": "An AI-powered music recommendation engine that analyzes your favorite tracks to discover new songs tailored to your taste.",
+  "requestFramePermissions": []
+}
